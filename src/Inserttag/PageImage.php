@@ -12,7 +12,7 @@ use Contao\FilesModel;
 use Contao\FrontendTemplate;
 use Contao\PageModel;
 
-class Featured extends \Backend {
+class PageImage extends \Backend {
 
     public function replacePageImageTag($tag) {
 
@@ -22,7 +22,7 @@ class Featured extends \Backend {
 
         $page = $this->getPage();
 
-        switch($page->hype_slider_options) {
+        switch($page->ww_pageimage_options) {
             case 'static':
                 return $this->generateStatic($page);
                 break 1;
@@ -36,11 +36,11 @@ class Featured extends \Backend {
     private function generateStatic(PageModel $page) {
 
         $template = new FrontendTemplate('wwpi_static');
-        $image = \FilesModel::findByPk($page->ww_static_image);
+        $image = \FilesModel::findByPk($page->ww_pageimage_image);
         $template->paths = $image->path;
-        $template->title = $page->ww_static_title;
-        $template->subtitle = $page->ww_static_subtitle;
-        $template->link = $page->ww_static_link;
+        $template->title = $page->ww_pageimage_title;
+        $template->subtitle = $page->ww_pageimage_subtitle;
+        $template->link = $page->ww_pageimage_link;
 
         return $template->parse();
     }

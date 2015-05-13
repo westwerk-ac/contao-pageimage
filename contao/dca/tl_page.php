@@ -3,23 +3,23 @@
 $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'] = array_merge(
     $GLOBALS['TL_DCA']['tl_page']['palettes']['__selector__'],
     [
-        'ww_slider_options'
+        'ww_pageimage_options'
     ]
 );
 
 $GLOBALS['TL_DCA']['tl_page']['subpalettes'] = array_merge(
     $GLOBALS['TL_DCA']['tl_page']['subpalettes'],
     [
-        'ww_slider_options_static'    => 'ww_static_title,ww_static_subtitle,ww_static_image,ww_static_link'
+        'ww_pageimage_options_static'    => 'ww_pageimage_title,ww_pageimage_subtitle,ww_pageimage_image,ww_pageimage_link'
     ]
 );
 
-$GLOBALS['TL_DCA']['tl_page']['palettes']['regular'] .= ';{ww_slider_options_legend},ww_slider_options';
+$GLOBALS['TL_DCA']['tl_page']['palettes']['regular'] .= ';{ww_pageimage_options_legend},ww_pageimage_options';
 
-// <editor-fold desc="Slider DCA">
+// <editor-fold desc="PageImage DCA">
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['ww_slider_options'] = [
-    'label'            => &$GLOBALS['TL_LANG']['tl_page']['ww_slider_options'],
+$GLOBALS['TL_DCA']['tl_page']['fields']['ww_pageimage_options'] = [
+    'label'            => &$GLOBALS['TL_LANG']['tl_page']['ww_pageimage_options'],
     'exclude'          => true,
     'inputType'        => 'select',
     'options_callback' => ['Westwerk\Contao\PageImage\DCA\TlPage', 'getSliderOptions'],
@@ -27,24 +27,24 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['ww_slider_options'] = [
     'sql'              => "varchar(100) NULL"
 ];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['ww_static_title'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_page']['ww_static_title'],
+$GLOBALS['TL_DCA']['tl_page']['fields']['ww_pageimage_title'] = [
+    'label'     => &$GLOBALS['TL_LANG']['tl_page']['ww_pageimage_title'],
     'exclude'   => true,
     'inputType' => 'text',
     'eval'      => ['tl_class' => 'w50 clr'],
     'sql'       => "varchar(256) NULL"
 ];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['ww_static_subtitle'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_page']['ww_static_subtitle'],
+$GLOBALS['TL_DCA']['tl_page']['fields']['ww_pageimage_subtitle'] = [
+    'label'     => &$GLOBALS['TL_LANG']['tl_page']['ww_pageimage_subtitle'],
     'exclude'   => true,
     'inputType' => 'text',
     'eval'      => ['tl_class' => 'w50'],
     'sql'       => "varchar(256) NULL"
 ];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['ww_static_image'] = [
-    'label'         => &$GLOBALS['TL_LANG']['tl_page']['ww_static_image'],
+$GLOBALS['TL_DCA']['tl_page']['fields']['ww_pageimage_image'] = [
+    'label'         => &$GLOBALS['TL_LANG']['tl_page']['ww_pageimage_image'],
     'exclude'       => true,
     'inputType'     => 'fileTree',
     'eval'          => [
@@ -56,8 +56,8 @@ $GLOBALS['TL_DCA']['tl_page']['fields']['ww_static_image'] = [
     'sql'           => "binary(16) NULL"
 ];
 
-$GLOBALS['TL_DCA']['tl_page']['fields']['ww_static_link'] = [
-    'label'     => &$GLOBALS['TL_LANG']['tl_page']['ww_static_link'],
+$GLOBALS['TL_DCA']['tl_page']['fields']['ww_pageimage_link'] = [
+    'label'     => &$GLOBALS['TL_LANG']['tl_page']['ww_pageimage_link'],
     'exclude'   => true,
     'inputType' => 'pageTree',
     'eval'      => ['tl_class' => 'w50'],
