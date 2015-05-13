@@ -1,0 +1,9 @@
+<div class="stage" style="background-image: url('<?php echo $this->paths; ?>');">
+    <?php if($this->title): ?>
+    <div class="stage__inside">
+        <h1 class="stage__headline"><?php echo $this->title; ?></h1>
+    </div>
+    <?php endif; ?>
+</div>
+
+

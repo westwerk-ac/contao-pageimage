@@ -1,0 +1,45 @@
+{
+  "name": "westwerk/contao-pageimage",
+  "description": "Controls for a static image and meta information on every page.",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "type": "contao-module",
+  "keywords": [
+    "contao",
+    "pageimage",
+    "westwerk"
+  ],
+  "authors": [
+    {
+      "name": "Tim Becker",
+      "email": "tb@westwerk.ac"
+    },
+    {
+      "name": "Nico Schneider",
+      "email": "nico.tcap@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Westwerk\\Contao\\Featured\\": "src"
+    }
+  },
+  "require": {
+    "php": ">=5.4",
+    "contao/core": ">=3.2,<4",
+    "contao-community-alliance/composer-plugin": "~2.0"
+  },
+  "support": {
+    "email": "web@westwerk.ac",
+    "issues": "https://github.com/westwerk-ac/contao-pageimage/issues",
+    "source": "https://github.com/westwerk-ac/contao-pageimage"
+  },
+  "extra": {
+    "contao": {
+      "sources": {
+        "": "system/modules/westwerk-contaopageimage"
+      }
+    }
+  }
+}
