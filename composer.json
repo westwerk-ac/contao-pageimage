@@ -22,7 +22,7 @@
   ],
   "autoload": {
     "psr-4": {
-      "Westwerk\\Contao\\Featured\\": "src"
+      "Westwerk\\Contao\\PageImage\\": "src"
     }
   },
   "require": {
