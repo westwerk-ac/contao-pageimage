@@ -38,7 +38,7 @@
   "extra": {
     "contao": {
       "sources": {
-        "": "system/modules/westwerk-contaopageimage"
+        "": "system/modules/westwerk-contaopageimage/contao"
       }
     }
   }

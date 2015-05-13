@@ -1,4 +1,13 @@
-<?php namespace Westwerk\Contao\PageImage\DCA;
+<?php
+
+/**
+ * PageImage
+ * Westwerk GmbH & Co. KG
+ * www.westwerk.ac
+ * Tim Becker, tb@westwerk.ac
+ */
+
+namespace Westwerk\Contao\PageImage\DCA;
 
 class TlPage extends \Backend {
 

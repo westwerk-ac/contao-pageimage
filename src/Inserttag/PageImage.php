@@ -6,7 +6,7 @@
  * Tim Becker, tb@westwerk.ac
  */
 
-namespace Westwrk\Contao\PageImage\Inserttag;
+namespace Westwerk\Contao\PageImage\Inserttag;
 
 use Contao\FilesModel;
 use Contao\FrontendTemplate;
@@ -36,7 +36,7 @@ class Featured extends \Backend {
     private function generateStatic(PageModel $page) {
 
         $template = new FrontendTemplate('wwpi_static');
-        $image = \FilesModel::findByPk($page->hype_static_image);
+        $image = \FilesModel::findByPk($page->ww_static_image);
         $template->paths = $image->path;
         $template->title = $page->ww_static_title;
         $template->subtitle = $page->ww_static_subtitle;
